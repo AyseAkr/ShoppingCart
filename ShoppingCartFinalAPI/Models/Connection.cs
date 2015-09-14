@@ -85,16 +85,15 @@ namespace ShoppingCartFinalAPI.Models
 
                 while (reader.Read())
                 {
-                    // int id = Convert.ToInt32(reader.GetInt32(0));
+        
                     int id = 0;
                     double price = 0;
 
-
-                    //  id = (int)Convert.ToInt32(reader.GetInt32(0));
+                    
                     id = Convert.ToInt32(reader.GetInt32(0));
                     string name = reader.GetString(1);
                     string detail = reader.GetString(2);
-                    //   int price = Convert.ToInt32(reader.GetInt32(3));
+                 
                     price = Convert.ToDouble(reader.GetString(3));
                     string currency = reader.GetString(4);
                     products.Add(new ProductModel() { Id = id, ProductName = name, detail = detail, price = price, currency = currency });
@@ -104,36 +103,35 @@ namespace ShoppingCartFinalAPI.Models
             return products;
              }
 
-        public int OrderPage()
+        public List<Order> OrderPage()
         {
 
             con.Open();
 
-            SqlCommand cmd = new SqlCommand("SELECT Order_id FROM OrderData", con);
-            int ID = Convert.ToInt32(cmd.ExecuteScalar());
+            SqlCommand cmd = new SqlCommand("select OrderData.Order_id as orderId , OrderData.Total ,OrderItem.itemId as itemId, p.product_name, p.product_detail, p.product_price, p.currency from OrderItem"
+                +" INNER JOIN OrderData  ON OrderItem.OrderId = OrderData.Order_id"
+                +" INNER JOIN PRODUCT p ON OrderItem.itemId = p.Id; ", con);
 
-            SqlCommand cmd2 = new SqlCommand("SELECT itemId FROM OrderItem where OrderId=" + ID + ";", con);
-            int ItemId = Convert.ToInt32(cmd2.ExecuteScalar());
-            int[] array;
-
-            /*    List<Order> order = new List<Order>();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                int id;
-
-                double total;
-                SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            List<Order> order = new List<Order>();
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
                  {
+                double price = 0;
+                double total=0;
+                total = Convert.ToDouble(reader.GetString(1));
+                string name = reader.GetString(3);
+                string detail = reader.GetString(4);
+                price = Convert.ToDouble(reader.GetString(5));
+                string currency = reader.GetString(6);
 
-                        id = Convert.ToInt32(reader.GetInt32(0));
-                        total = Convert.ToDouble(reader.GetString(1));
-                    SqlCommand cmd2 = new SqlCommand("SELECT * FROM Product where Id=" + id +"; " , con);//////READER İÇERİSİNDE READER??
-                }
+                order.Add(new Order() { total = total, name = name, detail = detail, price = price, currency = currency });
+            }
 
-                */
-            return ID;
+            return order;
+  
         }
         public int OrderData(int[] ItemId,string total)
         {

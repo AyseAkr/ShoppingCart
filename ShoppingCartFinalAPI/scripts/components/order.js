@@ -1,6 +1,6 @@
 /** @jsx React.DOM */
 
-var Products = React.createClass({
+var OrderPagejs = React.createClass({
   
     getInitialState: function() {
         return {
@@ -12,9 +12,9 @@ var Products = React.createClass({
 
     componentDidMount: function() {
         var self =this;
-
+        console.log("oder.js")
         $.ajax({
-            url: 'api/Product',
+            url: 'api/OrderPage',
             dataType: 'json',
             type: 'GET',
             contentType: 'application/json',
@@ -29,7 +29,7 @@ var Products = React.createClass({
                 //   console.log(data[1]);
 
                 self.setState({data:data});
-          
+             
               
             
 
@@ -40,23 +40,7 @@ var Products = React.createClass({
             }
         });
     },
-    addToCart: function(i) {
- 
-        var x = this.state.data;
-        $.publish('cart.added',x[i]);
-     
-    },
 
-    removeToCart: function(i) {
-    
-        var x = this.state.data;
-        $.publish('cart.removed', x[i].Id);
-        
-
-    },
-    handleClick: function(i) {
-        console.log('You clicked: ' + this.state.data[i]);
-    },
     loadComp: function()
     {
        

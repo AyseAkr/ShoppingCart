@@ -7,9 +7,11 @@ namespace ShoppingCartFinalAPI.Models
 {
     public class Order
     {
-        public int Id { get; set; }
-        public string total { get; set; }
-        //public int ItemId { get; set; }
-        public int[] ItemId { get; set; }
+
+        public double total { get; set; }
+        public double price { get; set; }
+        public string name { get; set; }
+        public string detail { get; set; }
+        public string currency { get; set; }
     }
 }

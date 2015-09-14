@@ -121,6 +121,7 @@ var Cart = React.createClass({
 
         });
 	},
+
    render: function() {
        var self=this;
         arr:[];
