@@ -1,0 +1,8 @@
+C:\Users\Ayse\Documents\Visual Studio 2015\Projects\ShoppingCartFinalAPI\DAL\bin\Debug\DAL.dll.config
+C:\Users\Ayse\Documents\Visual Studio 2015\Projects\ShoppingCartFinalAPI\DAL\bin\Debug\DAL.dll
+C:\Users\Ayse\Documents\Visual Studio 2015\Projects\ShoppingCartFinalAPI\DAL\bin\Debug\DAL.pdb
+C:\Users\Ayse\Documents\Visual Studio 2015\Projects\ShoppingCartFinalAPI\DAL\bin\Debug\UserObject.dll
+C:\Users\Ayse\Documents\Visual Studio 2015\Projects\ShoppingCartFinalAPI\DAL\bin\Debug\UserObject.pdb
+C:\Users\Ayse\Documents\Visual Studio 2015\Projects\ShoppingCartFinalAPI\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Ayse\Documents\Visual Studio 2015\Projects\ShoppingCartFinalAPI\DAL\obj\Debug\DAL.dll
+C:\Users\Ayse\Documents\Visual Studio 2015\Projects\ShoppingCartFinalAPI\DAL\obj\Debug\DAL.pdb

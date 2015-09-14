@@ -1,0 +1,9 @@
+C:\Users\Ayse\Documents\Visual Studio 2015\Projects\ShoppingCartFinalAPI\UserBL\bin\Debug\UserBL.dll
+C:\Users\Ayse\Documents\Visual Studio 2015\Projects\ShoppingCartFinalAPI\UserBL\bin\Debug\UserBL.pdb
+C:\Users\Ayse\Documents\Visual Studio 2015\Projects\ShoppingCartFinalAPI\UserBL\bin\Debug\DAL.dll
+C:\Users\Ayse\Documents\Visual Studio 2015\Projects\ShoppingCartFinalAPI\UserBL\bin\Debug\UserObject.dll
+C:\Users\Ayse\Documents\Visual Studio 2015\Projects\ShoppingCartFinalAPI\UserBL\bin\Debug\DAL.pdb
+C:\Users\Ayse\Documents\Visual Studio 2015\Projects\ShoppingCartFinalAPI\UserBL\bin\Debug\UserObject.pdb
+C:\Users\Ayse\Documents\Visual Studio 2015\Projects\ShoppingCartFinalAPI\UserBL\obj\Debug\UserBL.csprojResolveAssemblyReference.cache
+C:\Users\Ayse\Documents\Visual Studio 2015\Projects\ShoppingCartFinalAPI\UserBL\obj\Debug\UserBL.dll
+C:\Users\Ayse\Documents\Visual Studio 2015\Projects\ShoppingCartFinalAPI\UserBL\obj\Debug\UserBL.pdb

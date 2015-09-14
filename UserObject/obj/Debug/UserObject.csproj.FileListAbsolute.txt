@@ -1,0 +1,4 @@
+C:\Users\Ayse\Documents\Visual Studio 2015\Projects\ShoppingCartFinalAPI\UserObject\bin\Debug\UserObject.dll
+C:\Users\Ayse\Documents\Visual Studio 2015\Projects\ShoppingCartFinalAPI\UserObject\bin\Debug\UserObject.pdb
+C:\Users\Ayse\Documents\Visual Studio 2015\Projects\ShoppingCartFinalAPI\UserObject\obj\Debug\UserObject.dll
+C:\Users\Ayse\Documents\Visual Studio 2015\Projects\ShoppingCartFinalAPI\UserObject\obj\Debug\UserObject.pdb

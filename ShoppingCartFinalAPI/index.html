@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>React Shop</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <script src="scripts/libs/react.min.js"></script>
+    <script src="scripts/libs/JSXTransformer.js"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-inverse">
+            <p class="navbar-text">Ayse's Farm</p>
+            <div class="pull-right" />
+
+                <a href="loginModal.html" class="btn btn-info" role="button" >Sign in </a>
+        </nav>
+
+     
+        <div class="row">
+            <div class="col-md-8">
+                <h3>Products</h3>
+                <div id="producturl" class="producturl">
+                    
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <h3>Shopping Cart</h3>
+                <div id="cart" class="cart">
+
+                </div>
+
+
+
+                <div id="cart" class="cart">
+
+                </div>
+
+                <div id="tpop" class="tpop">
+
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul class="pager">
+                <li><a href="#">Previous</a></li>
+                <li><a href="#">Next</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script src="scripts/libs/jquery.min.js"></script>
+    <script src="scripts/libs/jquery.ba-tinypubsub.js"></script>
+    <script src="data/products.js"></script>
+    <script type="text/jsx" src="scripts/components/product.js">
+    </script>
+    <script type="text/jsx" src="scripts/components/products-list.js">
+    </script>
+    <script type="text/jsx" src="scripts/components/cart.js">
+    </script>
+
+    <script type="text/jsx">
+        /** @jsx React.DOM */
+
+       
+        React.renderComponent(
+        <Cart />, document.getElementById('cart'));
+
+        React.renderComponent(
+        <Products />, document.getElementById('producturl'));
+
+    </script>
+</body>
+</html>

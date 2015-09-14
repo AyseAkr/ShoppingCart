@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Page</title>
+    <meta charset="utf-8">
+	
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4">
+            <h1 class="text-center login-title">Sign in </h1>
+            <div class="account-wall">
+                <div class="pull-left">
+                    <img src="images/07.jpg" alt="" height="400" width="400" onclick="add" />
+
+
+                    <input id="name" type="text" class="form-control" placeholder="Email" required autofocus>
+                    <input id="password" type="password" class="form-control" placeholder="Password" required>
+
+                  
+                    <input type="button" class="add" value="sign in" id="add"/>
+                <label class="checkbox pull-left">
+                    <input type="checkbox" value="remember-me">
+                    Remember me
+                </label>
+			
+                <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
+            
+				           
+            </div>
+            <a href="#" class="text-center new-account">Create an account </a>
+			 </div>
+        </div>
+    </div>
+</div>
+
+ <script>
+     $(".add").click(function (event) {
+         var dataObject
+         name = $('#name').val();
+         password = $('#password').val();
+         var upassword = "'" +password + "' ";
+         var uname = "'" + name + "' ";
+         var pageUrl = 'http://localhost:50164/api/UserApi/Login';
+         $.ajax({
+             type: 'POST',
+
+             contentType: 'application/json; charset=utf-8',
+             url: pageUrl,
+
+             data:{"name":uname,"password":upassword},
+             dataType: "json",
+
+
+             success: function (e) {
+                 if (e) {
+                     alert("success");
+                 }
+                 console.log(e);
+                 console.log('correct!');
+                 window.location = "index.html";
+             },
+             error: function (xhr, errorText ){
+                  
+             
+               
+                 console.log("errrrrrrrrrrrrr");
+               
+             }
+         });
+     });
+
+
+    </script>
+</body>
+</html>
